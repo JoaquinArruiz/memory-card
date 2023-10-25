@@ -1,0 +1,52 @@
+.CardBoard{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    
+    
+    .pokeCard{
+        width: fit-content;
+        width: 100%;
+        min-width: 15em;
+        max-width: 15em;
+        min-height: 15em;
+        max-height: 15em;
+        background-color: rgb(187, 119, 102);
+        border-radius: 1em;
+        margin: 1em;
+        align-content: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: transform 70ms ease-in-out;
+        box-shadow: 3px 3px 2px 3px rgba(0,0,0,0.5);
+
+        &:hover{
+            cursor: pointer;
+            transform: matrix(1.01, 0.05, 0, 1.01, 0, 0);
+            .pokeName{
+                color: gold;
+                font-size: 1.05em;
+            }
+        }
+
+        .pokeImg{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 10em;
+            height: 10em;
+        }
+
+        .pokeName{
+            text-align: center;
+            font-size: 1em;
+            font-weight: bold;
+            font-family: 'Press Start 2P', cursive;
+            color: rgb(228, 228, 228);
+            text-shadow: 2px 2px 1px rgba(0,0,0);
+        }
+    }
+}
