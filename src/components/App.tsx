@@ -4,9 +4,6 @@ import Pokemon from '../interfaces/pokemon'
 import ScoreBoard from './ScoreBoard'
 import '../styles/App.scss'
 
-
-
-
 function App() {
   const [pokemons, setPokemons] = useState([] as Pokemon[]);
   const [score, setScore] = useState(0);
@@ -15,8 +12,13 @@ function App() {
 
   const fetchPokemons = ():void => {
     setPokemons([]);
+    const usedNumbers = [54];
     for (let i = 0; i < 5; i++) {
-      const randomNumber:number = Math.floor(Math.random() * 151) + 1
+      let randomNumber:number = Math.floor(Math.random() * 151) + 1
+      if (usedNumbers.includes(randomNumber)) {
+        randomNumber = Math.floor(Math.random() * 151) + 1
+      }
+      usedNumbers.push(randomNumber);
       fetch(`https://pokeapi.co/api/v2/pokemon/${randomNumber}`)
       .then(response => response.json())
       .then(data =>{
@@ -54,14 +56,6 @@ function App() {
     }
     setPokemons(newPokemons);
   }
-
-    useEffect(() => {
-    console.log(pokemons);
-  }, [pokemons]);
-
-  useEffect(() => {
-    console.log(score);
-  }, [score]);
 
   const restart = ():void =>{
     setScore(0);

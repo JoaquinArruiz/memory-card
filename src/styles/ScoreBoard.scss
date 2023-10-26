@@ -10,5 +10,8 @@
         font-size: 1.5em;
         color: rgb(228, 228, 228);
         text-shadow: 2px 2px 1px rgba(0,0,0);
+        &:hover{
+            cursor: default;
+        }
     }
 }
