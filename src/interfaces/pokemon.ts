@@ -1,4 +1,4 @@
-type Pokemon = {
+interface Pokemon {
     id:number,
     name:string,
     sprite:string,
