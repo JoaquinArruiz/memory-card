@@ -30,7 +30,5 @@ Hosted in Github Pages
 ```npm run dev```
 
 
-
-
 ## Demo Image
 ![Demo Image for the project](.\resources\images\demo.png)
