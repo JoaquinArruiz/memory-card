@@ -31,4 +31,4 @@ Hosted in Github Pages
 
 
 ## Demo Image
-![Demo Image for the project](.\resources\images\demo.png)
+![Demo Image for the project](https://github.com/JoaquinArruiz/memory-card/blob/main/resources/images/demo.png?raw=true)
